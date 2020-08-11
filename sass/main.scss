@@ -1,0 +1,35 @@
+@import url("https://use.typekit.net/xsu2yzn.css");
+
+@import './popup';
+@import './loadingspinner';
+@import './doublecolumn';
+@import './column';
+@import './inventory';
+
+:root {
+  --brand-main: #ef41fa;
+  --text-color: #666;
+  --text-dark: #111;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+a,
+input,
+label {
+  font-family: roboto-condensed, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  margin: 0;
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1"
+      user-scalable="no"
+    />
+    <link href="src/css/main.css" rel="stylesheet" type="text/css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.14.0/css/all.css"
+      integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc"
+      crossorigin="anonymous"
+    />
+
+    <title>Slick Popup Component</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <main>
+      <section class="section">
+        <button class="test-btn">Test Popup</button>
+        <div class="loading_container hidden">
+          <p class="loading_text">Checking Inventory Level...</p>
+          <div class="spinner_container">
+            <div class="spinner"></div>
+            <img src="../imgs/logo.png" alt="logo" />
+          </div>
+          <img src="../imgs/secure.png" alt="secure" />
+        </div>
+
+        <form class="form hidden" onsubmit="handleSubmit(event)">
+          <div class="form_inner">
+            <div class="close_icon close">
+              <i class="far fa-times-circle"></i>
+            </div>
+            <div class="heading">
+              <img src="../imgs/logo.png" alt="slick logo" />
+              <h2>
+                <img src="../imgs/fireworks.png" alt="fireworks" />
+                CONGRATULATIONS
+                <img src="../imgs/fireworks.png" alt="fireworks" />
+              </h2>
+              <h3>We have reserved a Slick Lash Kit for you.</h3>
+              <span></span>
+              <p>First Let's Create Your Account</p>
+            </div>
+            <div class="input_col">
+              <label>Name*</label>
+              <input
+                type="text"
+                name="name"
+                placeholder="Please Enter Your Name"
+                onchange="onChange(event)"
+                id="name"
+                required
+              />
+            </div>
+            <div class="input_col">
+              <label>Email*</label>
+              <input
+                type="email"
+                name="email"
+                placeholder="Please Enter Your Email"
+                onchange="onChange(event)"
+                id="email"
+                required
+              />
+            </div>
+            <div class="input_col">
+              <button onsubmit="handleSubmit(event)">
+                continue <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+
+        <div class="inventory_container hidden">
+          <div class="close_icon close">
+            <i class="far fa-times-circle"></i>
+          </div>
+          <div class="container_inner">
+            <div class="heading">
+              <img src="../imgs/logo.png" alt="logo" />
+              <h2>CONGRATULATIONS!</h2>
+              <h4>We have reserved a Slick Lash Kit for you</h4>
+              <span></span>
+              <p>
+                Personalize Your Package! Add up to (3) bonus lashes to your
+                bundle at an exclusive price!
+              </p>
+            </div>
+            <div class="lash_grid">
+              <!--This is loaded in the js file-->
+            </div>
+            <div class="btn_container">
+              <button>Continue <i class="fas fa-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+        `
+      </section>
+    </main>
+    <script src="/js/index.js"></script>
+  </body>
+</html>
