@@ -257,7 +257,8 @@
     grid-template-columns: repeat(2, 1fr);
     padding: 6rem 1rem;
     position: relative;
-    border: 10px solid var(--text-dark); }
+    border: 10px solid var(--text-dark);
+    border-top: 0; }
     .two_col_container .two_col .col {
       display: flex;
       flex-direction: column;
@@ -804,6 +805,121 @@ body
         color: #fff;
         font-size: 4vw;
         margin-left: 1rem; } }
+
+.subscription-container {
+  grid-column-start: 1;
+  grid-column-end: 3;
+  border: 10px solid var(--text-dark);
+  border-top: 0;
+  margin: 2rem 0; }
+  .subscription-container .header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0; }
+    .subscription-container .header h4 {
+      color: #fff;
+      margin: 0;
+      width: 100%;
+      padding: 1rem;
+      background: var(--text-dark);
+      color: #fff;
+      font-size: 1.5vw;
+      text-transform: uppercase;
+      text-align: center;
+      font-weight: 700; }
+  .subscription-container .two_row_container {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(2, auto); }
+    .subscription-container .two_row_container .row {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+      .subscription-container .two_row_container .row .col {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .subscription-container .two_row_container .row .col img {
+          max-width: 100%; }
+    .subscription-container .two_row_container .center-col {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center; }
+      .subscription-container .two_row_container .center-col .col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 70%;
+        margin: 1rem; }
+        .subscription-container .two_row_container .center-col .col p {
+          text-align: Center;
+          font-weight: 600;
+          line-height: 1.5;
+          font-size: 1rem;
+          margin: 2rem; }
+        .subscription-container .two_row_container .center-col .col button {
+          width: 20rem;
+          height: 3rem;
+          background: var(--text-dark);
+          filter: drop-shadow(0 0 0);
+          color: #fff;
+          text-transform: uppercase;
+          border: 0; }
+          .subscription-container .two_row_container .center-col .col button:hover {
+            filter: drop-shadow(0 1px 10px var(--brand-main)); }
+    .subscription-container .two_row_container .two-col {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr); }
+      .subscription-container .two_row_container .two-col .col {
+        display: flex;
+        flex-direction: column;
+        align-items: center; }
+        .subscription-container .two_row_container .two-col .col img {
+          max-width: 100%; }
+      .subscription-container .two_row_container .two-col .alt {
+        background: var(--text-dark);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; }
+        .subscription-container .two_row_container .two-col .alt h2 {
+          text-align: center;
+          font-size: 3vw;
+          font-weight: 700;
+          color: #fff;
+          margin: 2rem;
+          text-transform: uppercase; }
+        .subscription-container .two_row_container .two-col .alt span {
+          background: var(--brand-main);
+          height: 8px;
+          width: 100px;
+          border-radius: 100px;
+          display: block; }
+
+@media screen and (max-width: 900px) {
+  .subscription-container {
+    grid-column-start: 1;
+    grid-column-end: 1; }
+    .subscription-container .header h4 {
+      font-size: 3vw; }
+    .subscription-container .two_row_container .two-col {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 1fr); }
+      .subscription-container .two_row_container .two-col .col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        order: 1; }
+        .subscription-container .two_row_container .two-col .col img {
+          max-width: 100%; }
+      .subscription-container .two_row_container .two-col .alt {
+        order: 0; }
+        .subscription-container .two_row_container .two-col .alt h2 {
+          font-size: 7vw; } }
 
 :root {
   --brand-main: #ef41fa;

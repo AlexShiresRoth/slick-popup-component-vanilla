@@ -102,6 +102,7 @@ const inventoryArray = [
     imgs: [],
     tab: "",
   },
+  
 ].reverse();
 
 const state = {
@@ -195,7 +196,7 @@ function loadLashGrid() {
 
     return item.type === "lash set"
       ? selectors.lashGrid.insertAdjacentHTML("afterbegin", markup)
-      : selectors.lashGrid.insertAdjacentHTML("beforeend", altMarkup);
+      : selectors.lashGrid.insertAdjacentHTML("afterbegin", altMarkup);
   });
 }
 
