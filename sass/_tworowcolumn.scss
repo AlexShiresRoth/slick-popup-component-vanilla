@@ -116,7 +116,7 @@
     grid-column-end: 1;
     & .header {
       & h4 {
-          font-size:3vw;
+        font-size: 3vw;
       }
     }
     & .two_row_container {
@@ -138,6 +138,18 @@
           & h2 {
             font-size: 7vw;
           }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .subscription-container {
+    & .two_row_container {
+      & .center-col {
+        & .col {
+          max-width: 90%;
         }
       }
     }

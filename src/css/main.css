@@ -921,6 +921,10 @@ body
         .subscription-container .two_row_container .two-col .alt h2 {
           font-size: 7vw; } }
 
+@media screen and (max-width: 600px) {
+  .subscription-container .two_row_container .center-col .col {
+    max-width: 90%; } }
+
 :root {
   --brand-main: #ef41fa;
   --text-color: #666;
