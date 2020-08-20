@@ -11,6 +11,7 @@
   --brand-main: #ef41fa;
   --text-color: #666;
   --text-dark: #111;
+  --text-medium: "#333";
 }
 
 body {
@@ -28,7 +29,8 @@ h6,
 p,
 a,
 input,
-label {
+label,
+span {
   font-family: roboto-condensed, sans-serif;
   font-weight: 400;
   font-style: normal;

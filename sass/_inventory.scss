@@ -35,32 +35,53 @@
       display: flex;
       flex-direction: column;
       align-items: center;
-      justify-content: center;
-      text-align: center;
-      margin: 2rem 0;
+      margin-bottom: 2rem;
       & img {
         max-width: 7rem;
       }
-      & h2 {
-        font-weight: 700;
-        font-size: 2vw;
-        margin: 0;
+      & .img-container {
+        width: 100%;
+        height: 20vh;
+        background: url("/imgs/slick-lash-retouch-banner.png");
+        background-size: cover;
+        background-position: center;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        justify-items: center;
+        align-items: center;
+        margin: 0.5rem 0;
+        & .date-display {
+          color: #fff;
+          font-weight: 900;
+          font-size: 2rem;
+          text-transform: uppercase;
+          &::after {
+            content: "";
+            display: block;
+            height: 3px;
+            width: 100%;
+            border-radius: 100px;
+            background: var(--brand-main);
+            margin: 0.5rem 0;
+          }
+        }
       }
-      & span {
-        height: 7px;
-        width: 120px;
-        border-radius: 50px;
-        background: var(--brand-main);
-        margin: 1rem 0;
+      & h3 {
+        color: var(--text-color);
+        text-align: center;
+        font-size: 1.2rem;
+        margin: 0.5rem 0;
+        & .emphasis {
+          font-style: italic;
+          color: var(--text-dark);
+          font-weight: 900;
+        }
       }
       & p {
-        font-size: 1.2vw;
+        color: #999;
+        font-size: 1rem;
         margin: 0;
-      }
-      & h4 {
-        font-size: 1.5vw;
-        font-weight: 500;
-        margin: 0;
+        text-align: center;
       }
     }
     & .lash_grid {
@@ -68,6 +89,12 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 0.5rem;
       justify-items: center;
+      & .column {
+        & h3 {
+          color: var(--brand-main);
+          font-size: 2rem;
+        }
+      }
     }
     & .btn_container {
       margin: 2rem 0;
@@ -89,12 +116,64 @@
   }
 }
 .hidden {
-  display:none;
+  display: none;
   visibility: hidden;
 }
 @media screen and (max-width: 1300px) {
   .inventory_container {
     & .container_inner {
+      & .heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+        & img {
+          max-width: 7rem;
+        }
+        & .img-container {
+          width: 100%;
+          height: 40vh;
+          background: url("/imgs/slick-lash-retouch-banner.png");
+          background-size: cover;
+          background-position: center;
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          justify-items: center;
+          align-items: center;
+          & .date-display {
+            color: #fff;
+            font-weight: 900;
+            font-size: 2rem;
+            text-transform: uppercase;
+            &::after {
+              content: "";
+              display: block;
+              height: 3px;
+              width: 100%;
+              border-radius: 100px;
+              background: var(--brand-main);
+              margin: 0.5rem 0;
+            }
+          }
+        }
+        & h3 {
+          color: var(--text-color);
+          text-align: center;
+          font-size: 1.2rem;
+          margin: 0.5rem 0;
+          & .emphasis {
+            font-style: italic;
+            color: var(--text-dark);
+            font-weight: 900;
+          }
+        }
+        & p {
+          color: #999;
+          font-size: 1rem;
+          margin: 0;
+          text-align: center;
+        }
+      }
       & .lash_grid {
         & .best_seller {
           margin-top: 2rem;
@@ -136,13 +215,7 @@
           font-size: 5vw;
           margin: 0;
         }
-        & span {
-          height: 7px;
-          width: 120px;
-          border-radius: 50px;
-          background: var(--brand-main);
-          margin: 1rem 0;
-        }
+
         & p {
           font-size: 3vw;
           margin: 0;

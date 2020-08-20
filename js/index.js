@@ -1,7 +1,6 @@
 //change these to update store
 //lashgrid array
 
-
 const state = {
   loading: false,
   visible: false,
@@ -20,7 +19,6 @@ const selectors = {
   lashGrid: document.querySelector(".lash_grid"),
   inventoryContainer: document.querySelector(".inventory_container"),
 };
-
 
 //loading state
 function changeText(text, time) {
@@ -134,6 +132,16 @@ const handlePopup = () => {
   });
   selectors.close.forEach((btn) => btn.addEventListener("click", closePopup));
 };
+
+const handleDate = () => {
+  const dateDisplay = document.querySelectorAll(".date-display");
+  const tenDaysFromNow = new Date(Date.now() + 10 * 24 * 60 * 60 * 1000);
+  console.log(tenDaysFromNow.toString().split(" "));
+  const splitDate = tenDaysFromNow.toString().split(" ");
+  dateDisplay.forEach(
+    (display) => (display.textContent = splitDate.slice(0, 3).join(" "))
+  );
+};
 ////////////////////////////////////////////
 
 //initial state
@@ -157,7 +165,7 @@ const handleState = () => {
 const main = () => {
   console.log("loaded");
   handlePopup();
-  loadLashGrid();
+  handleDate();
 };
 
 window.addEventListener("load", main);
