@@ -1,6 +1,5 @@
 .subscription-container {
-  grid-column-start: 1;
-  grid-column-end: 3;
+  width: 100%;
   border: 10px solid var(--text-dark);
   border-top: 0;
   margin: 2rem 0;
@@ -16,7 +15,6 @@
       padding: 1rem;
       background: var(--text-dark);
       color: #fff;
-      font-size: 1.5vw;
       text-transform: uppercase;
       text-align: center;
       font-weight: 700;
@@ -56,7 +54,6 @@
           text-align: Center;
           font-weight: 600;
           line-height: 1.5;
-          font-size: 1rem;
           margin: 2rem;
         }
         & button {
@@ -92,7 +89,6 @@
         justify-content: center;
         & h2 {
           text-align: center;
-          font-size: 3vw;
           font-weight: 700;
           color: #fff;
           margin: 2rem;
@@ -114,11 +110,7 @@
   .subscription-container {
     grid-column-start: 1;
     grid-column-end: 1;
-    & .header {
-      & h4 {
-        font-size: 3vw;
-      }
-    }
+
     & .two_row_container {
       & .two-col {
         display: grid;
@@ -135,9 +127,6 @@
         }
         & .alt {
           order: 0;
-          & h2 {
-            font-size: 7vw;
-          }
         }
       }
     }

@@ -39,7 +39,7 @@
     filter: drop-shadow(0 1px 10px #ddd);
     border-radius: 3px; }
     .section .form .form_inner {
-      max-width: 90%;
+      width: 80%;
       display: flex;
       flex-direction: column;
       align-items: center; }
@@ -60,41 +60,17 @@
         align-items: center; }
         .section .form .form_inner .heading img {
           max-width: 7rem; }
-        .section .form .form_inner .heading .img-container {
-          width: 100%;
-          height: 20vh;
-          background: url("/imgs/slick-lash-retouch-banner.png");
-          background-size: cover;
-          background-position: center;
-          display: grid;
-          grid-template-columns: repeat(2, 1fr);
-          justify-items: center;
-          align-items: center; }
-          .section .form .form_inner .heading .img-container .date-display {
-            color: #fff;
-            font-weight: 900;
-            font-size: 2rem;
-            text-transform: uppercase; }
-            .section .form .form_inner .heading .img-container .date-display::after {
-              content: "";
-              display: block;
-              height: 3px;
-              width: 100%;
-              border-radius: 100px;
-              background: var(--brand-main);
-              margin: 0.5rem 0; }
         .section .form .form_inner .heading h3 {
-          color: var(--text-color);
+          color: var(--text-dark);
           text-align: center;
-          font-size: 1.2rem;
+          text-transform: uppercase;
           margin: 0.5rem 0; }
           .section .form .form_inner .heading h3 .emphasis {
             font-style: italic;
             color: var(--text-dark);
             font-weight: 900; }
         .section .form .form_inner .heading p {
-          color: #999;
-          font-size: 1rem;
+          color: var(--text-color);
           margin: 0;
           text-align: center; }
       .section .form .form_inner .input_col {
@@ -175,11 +151,9 @@
           align-items: center;
           justify-content: space-around;
           color: var(--brand-main);
-          font-size: 5vw;
           margin: 0; }
         .section .form .form_inner .heading p {
           color: #999;
-          font-size: 1.2rem;
           margin: 0; }
       .section .form .form_inner .input_col button {
         width: 100%;
@@ -248,9 +222,7 @@
   display: flex;
   flex-direction: column;
   width: 100%;
-  margin-top: 2rem;
-  grid-column-start: 1;
-  grid-column-end: 3; }
+  margin-top: 2rem; }
   .two_col_container .tab {
     width: 100%;
     display: flex;
@@ -260,16 +232,15 @@
       padding: 1rem;
       background: var(--text-dark);
       color: #fff;
-      font-size: 1.5vw;
       text-transform: uppercase;
       text-align: center;
       font-weight: 700; }
   .two_col_container .two_col {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    padding: 6rem 1rem;
+    padding: 4rem 1rem;
     position: relative;
-    border: 10px solid var(--text-dark);
+    border: 6px solid var(--text-dark);
     border-top: 0; }
     .two_col_container .two_col .col {
       display: flex;
@@ -279,7 +250,6 @@
       position: relative; }
       .two_col_container .two_col .col .heading h3 {
         color: var(--text-dark);
-        font-size: 2vw;
         text-transform: uppercase;
         font-weight: 700; }
       .two_col_container .two_col .col .offer {
@@ -291,22 +261,21 @@
           display: flex;
           flex-direction: column;
           align-items: center;
-          color: var(--brand-main);
-          font-size: 1.3vw; }
+          text-align: center;
+          color: var(--brand-main); }
       .two_col_container .two_col .col .text_container {
         max-width: 70%;
         margin: 1rem 0;
         display: flex;
         z-index: 2; }
         .two_col_container .two_col .col .text_container p {
-          text-align: Center;
-          font-size: 1rem;
-          line-height: 1.3; }
+          text-align: center;
+          line-height: 1.5; }
       .two_col_container .two_col .col button {
-        box-shadow: 0;
+        box-shadow: 0 0 0;
         filter: drop-shadow(0 0 0);
-        width: 15rem;
-        height: 3.5rem;
+        width: 12rem;
+        height: 3rem;
         color: #fff;
         transition: all 0.3s ease; }
         .two_col_container .two_col .col button:hover {
@@ -318,7 +287,8 @@
         justify-content: center;
         align-items: Center;
         height: 100%;
-        width: 100%; }
+        width: 100%;
+        margin: 0; }
         .two_col_container .two_col .col .img_container .bg_block {
           height: 100%;
           width: 60%;
@@ -353,8 +323,6 @@
   .two_col_container {
     grid-column-start: 1;
     grid-column-end: 1; }
-    .two_col_container .tab h4 {
-      font-size: 3vw; }
     .two_col_container .two_col {
       display: grid;
       grid-template-columns: 1fr;
@@ -363,15 +331,13 @@
       border: 10px solid var(--text-dark); }
       .two_col_container .two_col .col .heading h3 {
         color: var(--text-dark);
-        font-size: 5vw;
         text-transform: uppercase;
         font-weight: 700; }
       .two_col_container .two_col .col .offer p {
         display: flex;
         flex-direction: column;
         align-items: center;
-        color: var(--brand-main);
-        font-size: 3.5vw; }
+        color: var(--brand-main); }
       .two_col_container .two_col .col button {
         box-shadow: 0;
         filter: drop-shadow(0 0 0);
@@ -397,8 +363,6 @@
         transform: translate(0, -2rem); } }
 
 @media screen and (max-width: 600px) {
-  .two_col_container .tab h4 {
-    font-size: 3vw; }
   .two_col_container .two_col .col .img_container img {
     width: 70%;
     background: var(--brand-main);
@@ -412,9 +376,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  box-shadow: 0 1px 5px #e1e1e1;
-  padding: 2rem 0;
-  position: relative; }
+  box-shadow: 0 1px 10px #eee;
+  border: 1px solid #eee;
+  border-radius: 3px;
+  padding: 1rem 0;
+  position: relative;
+  width: 100%; }
   .column .best_seller_tab_container {
     position: absolute;
     top: -0.3rem;
@@ -426,84 +393,78 @@
   .column button {
     box-shadow: 0;
     filter: drop-shadow(0 0 0);
-    width: 15rem;
-    height: 3.5rem;
+    max-width: 12rem;
+    height: 3rem;
     color: #fff;
     transition: all 0.3s ease; }
     .column button:hover {
       filter: drop-shadow(0 1px 10px var(--brand-main)); }
-  .column .wave:nth-of-type(1) {
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: block;
-    height: 100%;
-    z-index: 100; }
-  .column .wave:nth-of-type(2) {
-    position: absolute;
-    top: 0;
-    right: 0;
-    display: block;
-    height: 100%;
-    z-index: 100; }
-  .column .heading {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 2; }
-    .column .heading h3 {
-      color: var(--brand-main);
-      font-size: 2vw;
-      text-transform: uppercase;
-      font-weight: 700;
-      position: relative; }
-      .column .heading h3::after {
-        height: 10px;
-        background: var(--text-dark);
-        width: 100%;
-        content: "";
-        display: block;
-        position: absolute;
-        bottom: -0.1rem;
-        left: -0.2rem;
-        z-index: -1;
-        padding: 0.2rem; }
-    .column .heading h5 {
-      font-size: 1.5vw;
-      text-transform: uppercase; }
-  .column .offer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    z-index: 2; }
-    .column .offer p {
+  .column .column_grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+    justify-items: center; }
+    .column .column_grid .grid_col {
       display: flex;
       flex-direction: column;
       align-items: center;
-      color: var(--brand-main);
-      font-size: 1.3vw; }
-  .column .img_container {
-    max-width: 70%;
-    margin: -5rem 0;
-    z-index: 0;
-    position: relative; }
-    .column .img_container .bg_block {
-      height: 100%;
-      width: 100%;
-      background: var(--brand-main);
-      display: block;
-      position: absolute; }
-    .column .img_container img {
-      max-width: 100%; }
-  .column .text_container {
-    max-width: 70%;
-    margin: 1rem 0;
-    display: flex;
-    z-index: 2; }
-    .column .text_container p {
-      text-align: Center;
-      font-size: 1rem;
-      line-height: 1.3; }
+      justify-content: center; }
+      .column .column_grid .grid_col .heading {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 2; }
+        .column .column_grid .grid_col .heading h3 {
+          color: var(--brand-main);
+          text-transform: uppercase;
+          font-weight: 700;
+          position: relative; }
+          .column .column_grid .grid_col .heading h3::after {
+            height: 7px;
+            background: var(--text-dark);
+            width: 100%;
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: -0.1rem;
+            left: -0.25rem;
+            z-index: -1;
+            padding: 0.2rem; }
+        .column .column_grid .grid_col .heading h5 {
+          text-transform: uppercase; }
+      .column .column_grid .grid_col .img_container {
+        max-width: 50%;
+        z-index: 0;
+        margin-top: -4rem;
+        position: relative; }
+        .column .column_grid .grid_col .img_container .bg_block {
+          height: 100%;
+          width: 100%;
+          background: var(--brand-main);
+          display: block;
+          position: absolute; }
+        .column .column_grid .grid_col .img_container img {
+          max-width: 100%; }
+      .column .column_grid .grid_col .offer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 2; }
+        .column .column_grid .grid_col .offer p {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          color: var(--brand-main);
+          text-align: center;
+          font-weight: 600; }
+      .column .column_grid .grid_col .text_container {
+        max-width: 70%;
+        margin: 1rem 0;
+        display: flex;
+        z-index: 2; }
+        .column .column_grid .grid_col .text_container p {
+          text-align: center;
+          line-height: 1.5; }
 
 .best_seller {
   margin-top: 2rem; }
@@ -515,7 +476,8 @@ body
 > div.container_inner
 > div.lash_grid
 > div:nth-child(1) {
-  border: 10px solid var(--brand-main); }
+  border: 6px solid var(--brand-main);
+  background: linear-gradient(65deg, transparent 51%, #ee41fa44 50%); }
   body
 > main
 > section
@@ -527,9 +489,8 @@ body
     text-transform: uppercase;
     color: #fff;
     font-weight: 700;
-    font-size: 1.5vw;
     background: var(--brand-main);
-    padding: 1rem; }
+    padding: 0.6rem; }
 
 body
 > main
@@ -538,7 +499,8 @@ body
 > div.container_inner
 > div.lash_grid
 > div:nth-child(2) {
-  border: 10px solid var(--text-dark); }
+  border: 6px solid var(--text-dark);
+  background: linear-gradient(65deg, rgba(17, 17, 17, 0.096) 51%, transparent 50%); }
   body
 > main
 > section
@@ -550,46 +512,47 @@ body
     text-transform: uppercase;
     color: #fff;
     font-weight: 700;
-    font-size: 1.5vw;
     background: var(--text-dark);
-    padding: 1rem; }
+    padding: 0.6rem; }
 
-@media screen and (max-width: 900px) {
-  .column .heading h3 {
-    color: var(--brand-main);
-    font-size: 6vw;
-    text-transform: uppercase;
-    font-weight: 700;
-    position: relative; }
-    .column .heading h3::after {
-      height: 10px;
-      background: var(--text-dark);
-      width: 100%;
-      content: "";
-      display: block;
-      position: absolute;
-      bottom: 0rem;
-      left: -0.15rem;
-      z-index: -1;
-      padding: 0.2rem; }
-  .column .heading h5 {
-    font-size: 4vw;
-    text-transform: uppercase; }
-  .column .offer p {
-    font-size: 3.5vw; }
-  .column .img_container {
-    max-width: 70%;
-    margin: -5rem 0;
-    z-index: 0;
-    position: relative; }
-    .column .img_container .bg_block {
-      height: 100%;
-      width: 100%;
-      background: var(--brand-main);
-      display: block;
-      position: absolute; }
-    .column .img_container img {
-      max-width: 100%; }
+@media screen and (max-width: 1000px) {
+  .column .col-order-1 {
+    order: 1; }
+  .column .col-order-2 {
+    order: 2; }
+  .column .column_grid {
+    grid-template-columns: 1fr; }
+    .column .column_grid .heading h3 {
+      color: var(--brand-main);
+      text-transform: uppercase;
+      font-weight: 700;
+      position: relative; }
+      .column .column_grid .heading h3::after {
+        height: 10px;
+        background: var(--text-dark);
+        width: 100%;
+        content: "";
+        display: block;
+        position: absolute;
+        bottom: 0rem;
+        left: -0.15rem;
+        z-index: -1;
+        padding: 0.2rem; }
+    .column .column_grid .heading h5 {
+      text-transform: uppercase; }
+    .column .column_grid .img_container {
+      max-width: 70%;
+      margin: -5rem 0;
+      z-index: 0;
+      position: relative; }
+      .column .column_grid .img_container .bg_block {
+        height: 100%;
+        width: 100%;
+        background: var(--brand-main);
+        display: block;
+        position: absolute; }
+      .column .column_grid .img_container img {
+        max-width: 100%; }
   .best_seller {
     margin-top: 2rem; }
   body
@@ -599,15 +562,8 @@ body
 > div.container_inner
 > div.lash_grid
 > div:nth-child(1) {
-    border: 10px solid var(--brand-main); }
-    body
-> main
-> section
-> div.inventory_container
-> div.container_inner
-> div.lash_grid
-> div:nth-child(1) .best_seller_tab_container h4 {
-      font-size: 3vw; }
+    border: 6px solid var(--brand-main);
+    background: transparent; }
   body
 > main
 > section
@@ -615,19 +571,10 @@ body
 > div.container_inner
 > div.lash_grid
 > div:nth-child(2) {
-    border: 10px solid var(--text-dark); }
-    body
-> main
-> section
-> div.inventory_container
-> div.container_inner
-> div.lash_grid
-> div:nth-child(2) .best_seller_tab_container h4 {
-      font-size: 3vw; } }
+    border: 6px solid var(--text-dark);
+    background: transparent; } }
 
 @media screen and (max-width: 600px) {
-  .column .offer p {
-    font-size: 3.5vw; }
   .column .img_container {
     max-width: 70%;
     margin: -5rem 0;
@@ -650,15 +597,7 @@ body
 > div.container_inner
 > div.lash_grid
 > div:nth-child(1) {
-    border: 10px solid var(--brand-main); }
-    body
-> main
-> section
-> div.inventory_container
-> div.container_inner
-> div.lash_grid
-> div:nth-child(1) .best_seller_tab_container h4 {
-      font-size: 3vw; }
+    border: 6px solid var(--brand-main); }
   body
 > main
 > section
@@ -666,15 +605,7 @@ body
 > div.container_inner
 > div.lash_grid
 > div:nth-child(2) {
-    border: 10px solid var(--text-dark); }
-    body
-> main
-> section
-> div.inventory_container
-> div.container_inner
-> div.lash_grid
-> div:nth-child(2) .best_seller_tab_container h4 {
-      font-size: 3vw; } }
+    border: 6px solid var(--text-dark); } }
 
 .inventory_container {
   display: flex;
@@ -687,7 +618,7 @@ body
   z-index: 666;
   max-width: 70vw;
   top: 10vh;
-  margin: 10vh 0;
+  margin-bottom: 10vh;
   padding: 1rem 0; }
   .inventory_container .close_icon {
     position: absolute;
@@ -709,38 +640,41 @@ body
     .inventory_container .container_inner .heading {
       display: flex;
       flex-direction: column;
-      align-items: center;
-      margin-bottom: 2rem; }
+      align-items: center; }
       .inventory_container .container_inner .heading img {
         max-width: 7rem; }
-      .inventory_container .container_inner .heading .img-container {
-        width: 100%;
-        height: 20vh;
-        background: url("/imgs/slick-lash-retouch-banner.png");
-        background-size: cover;
-        background-position: center;
+      .inventory_container .container_inner .heading .heading_columns {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        justify-items: center;
-        align-items: center;
-        margin: 0.5rem 0; }
-        .inventory_container .container_inner .heading .img-container .date-display {
-          color: #fff;
-          font-weight: 900;
-          font-size: 2rem;
-          text-transform: uppercase; }
-          .inventory_container .container_inner .heading .img-container .date-display::after {
-            content: "";
-            display: block;
-            height: 3px;
-            width: 100%;
-            border-radius: 100px;
-            background: var(--brand-main);
-            margin: 0.5rem 0; }
+        margin: 1rem 0;
+        border: 1px solid #eee;
+        box-shadow: 0 1px 10px #eee;
+        border-radius: 3px; }
+        .inventory_container .container_inner .heading .heading_columns .heading_col {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding: 1rem; }
+          .inventory_container .container_inner .heading .heading_columns .heading_col .date-display {
+            color: var(--brand-main);
+            font-weight: 700;
+            text-transform: uppercase; }
+        .inventory_container .container_inner .heading .heading_columns .heading_col_tag {
+          grid-column-start: 1;
+          grid-column-end: 3;
+          background: #111;
+          display: flex;
+          justify-content: center;
+          padding: 1rem;
+          border-bottom-right-radius: 3px;
+          border-bottom-left-radius: 3px; }
+          .inventory_container .container_inner .heading .heading_columns .heading_col_tag p {
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 700; }
       .inventory_container .container_inner .heading h3 {
         color: var(--text-color);
         text-align: center;
-        font-size: 1.2rem;
         margin: 0.5rem 0; }
         .inventory_container .container_inner .heading h3 .emphasis {
           font-style: italic;
@@ -748,13 +682,12 @@ body
           font-weight: 900; }
       .inventory_container .container_inner .heading p {
         color: #999;
-        font-size: 1rem;
         margin: 0;
         text-align: center; }
     .inventory_container .container_inner .lash_grid {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 0.5rem;
+      grid-template-columns: 1fr;
+      gap: 1rem;
       justify-items: center; }
       .inventory_container .container_inner .lash_grid .column h3 {
         color: var(--brand-main);
@@ -782,37 +715,12 @@ body
   .inventory_container .container_inner .heading {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin-bottom: 2rem; }
+    align-items: center; }
     .inventory_container .container_inner .heading img {
       max-width: 7rem; }
-    .inventory_container .container_inner .heading .img-container {
-      width: 100%;
-      height: 40vh;
-      background: url("/imgs/slick-lash-retouch-banner.png");
-      background-size: cover;
-      background-position: center;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      justify-items: center;
-      align-items: center; }
-      .inventory_container .container_inner .heading .img-container .date-display {
-        color: #fff;
-        font-weight: 900;
-        font-size: 2rem;
-        text-transform: uppercase; }
-        .inventory_container .container_inner .heading .img-container .date-display::after {
-          content: "";
-          display: block;
-          height: 3px;
-          width: 100%;
-          border-radius: 100px;
-          background: var(--brand-main);
-          margin: 0.5rem 0; }
     .inventory_container .container_inner .heading h3 {
       color: var(--text-color);
       text-align: center;
-      font-size: 1.2rem;
       margin: 0.5rem 0; }
       .inventory_container .container_inner .heading h3 .emphasis {
         font-style: italic;
@@ -820,7 +728,6 @@ body
         font-weight: 900; }
     .inventory_container .container_inner .heading p {
       color: #999;
-      font-size: 1rem;
       margin: 0;
       text-align: center; }
   .inventory_container .container_inner .lash_grid .best_seller {
@@ -846,13 +753,10 @@ body
         max-width: 7rem; }
       .inventory_container .container_inner .heading h2 {
         font-weight: 700;
-        font-size: 5vw;
         margin: 0; }
       .inventory_container .container_inner .heading p {
-        font-size: 3vw;
         margin: 0; }
       .inventory_container .container_inner .heading h4 {
-        font-size: 3vw;
         font-weight: 500;
         margin: 0; }
       .inventory_container .container_inner .lash_grid {
@@ -879,8 +783,7 @@ body
         margin-left: 1rem; } }
 
 .subscription-container {
-  grid-column-start: 1;
-  grid-column-end: 3;
+  width: 100%;
   border: 10px solid var(--text-dark);
   border-top: 0;
   margin: 2rem 0; }
@@ -896,7 +799,6 @@ body
       padding: 1rem;
       background: var(--text-dark);
       color: #fff;
-      font-size: 1.5vw;
       text-transform: uppercase;
       text-align: center;
       font-weight: 700; }
@@ -930,7 +832,6 @@ body
           text-align: Center;
           font-weight: 600;
           line-height: 1.5;
-          font-size: 1rem;
           margin: 2rem; }
         .subscription-container .two_row_container .center-col .col button {
           width: 20rem;
@@ -959,7 +860,6 @@ body
         justify-content: center; }
         .subscription-container .two_row_container .two-col .alt h2 {
           text-align: center;
-          font-size: 3vw;
           font-weight: 700;
           color: #fff;
           margin: 2rem;
@@ -975,8 +875,6 @@ body
   .subscription-container {
     grid-column-start: 1;
     grid-column-end: 1; }
-    .subscription-container .header h4 {
-      font-size: 3vw; }
     .subscription-container .two_row_container .two-col {
       display: grid;
       grid-template-columns: 1fr;
@@ -989,9 +887,7 @@ body
         .subscription-container .two_row_container .two-col .col img {
           max-width: 100%; }
       .subscription-container .two_row_container .two-col .alt {
-        order: 0; }
-        .subscription-container .two_row_container .two-col .alt h2 {
-          font-size: 7vw; } }
+        order: 0; } }
 
 @media screen and (max-width: 600px) {
   .subscription-container .two_row_container .center-col .col {
@@ -1024,3 +920,9 @@ span {
   font-weight: 400;
   font-style: normal;
   margin: 0; }
+
+h1,
+h2,
+h3 {
+  color: var(--text-dark);
+  font-weight: 700; }
