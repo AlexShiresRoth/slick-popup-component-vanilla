@@ -1,0 +1,72 @@
+.prog-container {
+  display: flex;
+  height: 1.5rem;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 1rem;
+  & .progress-bar,
+  & .progress-bar-mid {
+    width: 100%;
+    height: 100%;
+    border-radius: 3px;
+    display: block;
+    background: #eee;
+    & .fill {
+      background: #ff00ed;
+      width: 0%;
+      height: 100%;
+      display: block;
+      transition: all 0.3s ease;
+      border-top-left-radius: 3px;
+      border-bottom-left-radius: 3px;
+      box-shadow: 0 1px 10px #ff00ed;
+    }
+  }
+  & .progress-bar .fill {
+    animation: showProgBegin 3s linear forwards infinite;
+  }
+  & .middle .fill {
+    animation: showProgMiddle 3s linear forwards infinite;
+  }
+  & .labels {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+
+@keyframes showProgBegin {
+  0% {
+    width: 1%;
+  }
+  50% {
+    width: 3%;
+  }
+  100% {
+    width: 1%;
+  }
+}
+@keyframes showProgMiddle {
+  0% {
+    width: 51%;
+  }
+  50% {
+    width: 53%;
+  }
+  100% {
+    width: 51%;
+  }
+}
+@keyframes showProgEnd {
+  0% {
+    width: 98%;
+  }
+  50% {
+    width: 100%;
+  }
+  100% {
+    width: 98%;
+  }
+}

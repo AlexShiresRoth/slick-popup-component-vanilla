@@ -1,0 +1,210 @@
+<div class="lash_grid">
+        
+             <div class="column best_seller">
+                 	<?php
+            			$sku1_name			=		$sku1[0]['name'];
+            			$sku1_image			=		$sku1[0]['image'];
+            			$sku1_price			=		number_format($sku1[0]['price'], 0);
+            			$sku1_price2		=		number_format($sku1[0]['price2'], 0);
+            			$sku1_detail		=		$sku1[0]['detail'];
+            			$sku1_sku			=		$sku1[0]['sku'];
+            			
+            			?>
+                <div class="best_seller_tab_container">
+                  <h4>best seller</h4>
+                </div>
+
+                <div class="column_grid">
+                  <div class="grid_col col-order-1">
+                    <div class="heading">
+                      <h3><?php echo $sku1_name; ?></h3>
+                    </div>
+                   <div class="img_container"><img src="imgs/<?php echo $sku1_image; ?>" alt="<?php echo $sku1_name; ?>" title="<?php echo $sku1_name; ?>" /></div>
+                  </div>
+                  <div class="grid_col col-order-2">
+                   	<div class="offer"><p>IN STORE $<?php echo $sku1_price2; ?> <br />THIS OFFER $<?php echo $sku1_price; ?></p></div>
+					<?php if(!empty($sku1_detail))	{	?>
+                    	<div class="text_container"><p style="font-size:15px;"><?php echo $sku1_detail; ?></p></div>
+					<?php	}	?>
+                   <button class="addToBagBtn" type="button" id="add_<?php echo $sku1_sku; ?>" onClick="cartAction('add','<?php echo $sku1_sku; ?>',<?php echo $sku1_price; ?>)" <?php if(isset($_SESSION[$sku1_sku])) { ?> style="display:none;"   <?php } ?>>Add To Bag</button>
+                    
+                    <a href="javascript:void(0)" title="Remove" onClick="cartAction('remove','<?php echo $sku1_sku; ?>')">
+                	<button class="rmvBtn" id="remove_<?php echo $sku1_sku; ?>" <?php if(!isset($_SESSION[$sku1_sku])) { ?> style="display:none; background: var(--brand-main);"  <?php } ?>>Remove X</button>
+                  </div>
+                </div>
+              </div>
+           
+				<div class="column best_seller"  >
+				     <?php
+            			$sku2_name			=		$sku2[0]['name'];
+            			$sku2_image			=		$sku2[0]['image'];
+            			$sku2_price			=		number_format($sku2[0]['price'], 0);
+            			$sku2_price2		=		number_format($sku2[0]['price2'], 0);
+            			$sku2_detail		=		$sku2[0]['detail'];
+            			$sku2_sku			=		$sku2[0]['sku'];
+            
+            			?>
+					<div class="best_seller_tab_container">
+                    	<h4>best seller</h4>
+                    </div>
+                     <div class="column_grid">
+                         	<div class="grid_col col-order-1">
+					<div class="offer"><p>IN STORE $<?php echo $sku2_price2; ?> <br />THIS OFFER $<?php echo $sku2_price; ?></p></div>
+					<?php if(!empty($sku2_detail))	{	?>
+                    <div class="text_container"><p style="font-size:15px;"><?php echo $sku2_detail; ?></p></div>
+                    <?php	}	?>
+					<button class="addToBagBtn" type="button" id="add_<?php echo $sku2_sku; ?>" onClick="cartAction('add','<?php echo $sku2_sku; ?>',<?php echo $sku2_price; ?>)" <?php if(isset($_SESSION[$sku2_sku])) { ?> style="display:none;"   <?php } ?>>Add To Bag</button>
+                    
+                    <a href="javascript:void(0)" title="Remove" onClick="cartAction('remove','<?php echo $sku2_sku; ?>')">
+                	<button class="rmvBtn" id="remove_<?php echo $sku2_sku; ?>" <?php if(!isset($_SESSION[$sku2_sku])) { ?> style="display:none; background: var(--brand-main);"   <?php } ?>>Remove X</button>
+                </a>
+				</div>
+                          <div class="grid_col col-order-2">
+					<div class="heading"><h3><?php echo $sku2_name; ?></h3></div>
+					<div class="img_container"><img src="imgs/<?php echo $sku2_image; ?>" alt="<?php echo $sku2_name; ?>" title="<?php echo $sku2_name; ?>"  /></div>
+					</div>
+				
+				</div>
+				</div>
+			
+        	
+				<div class="column">
+				    <?php
+            			$sku3_name			=		$sku3[0]['name'];
+            			$sku3_image			=		$sku3[0]['image'];
+            			$sku3_price			=		number_format($sku3[0]['price'], 0);
+            			$sku3_price2		=		number_format($sku3[0]['price2'], 0);
+            			$sku3_detail		=		$sku3[0]['detail'];
+            			$sku3_sku			=		$sku3[0]['sku'];	//$sku3_image	coy.png
+            
+            			
+            			?>
+					<div class="heading"><h3><?php echo $sku3_name; ?></h3></div>
+					<div class="img_container"><img src="imgs/<?php echo $sku3_image; ?>" alt="<?php echo $sku3_name; ?>" title="<?php echo $sku3_name; ?>"  /></div>
+					<div class="offer"><p>IN STORE $<?php echo $sku3_price2; ?> <br />THIS OFFER $<?php echo $sku3_price; ?></p></div>
+					<?php if(!empty($sku3_detail))	{	?>
+                    <div class="text_container"><p style="font-size:15px;"><?php echo $sku3_detail; ?></p></div>
+                    <?php	}	?>
+					
+					<button class="addToBagBtn" type="button" id="add_<?php echo $sku3_sku; ?>" onClick="cartAction('add','<?php echo $sku3_sku; ?>',<?php echo $sku3_price; ?>)" <?php if(isset($_SESSION[$sku3_sku])) { ?> style="display:none;"   <?php } ?>>Add To Bag</button>
+                    
+                    <a href="javascript:void(0)" title="Remove" onClick="cartAction('remove','<?php echo $sku3_sku; ?>')">
+                	<button class="rmvBtn"  id="remove_<?php echo $sku3_sku; ?>" <?php if(!isset($_SESSION[$sku3_sku])) { ?> style="display:none; background: var(--brand-main);"   <?php } ?>>Remove X</button>
+                    </a>
+				</div>
+            
+				<div class="column">
+				    <?php
+        				$sku4_name			=		$sku4[0]['name'];
+        				$sku4_image			=		$sku4[0]['image'];
+        				$sku4_price			=		number_format($sku4[0]['price'], 0);
+        				$sku4_price2		=		number_format($sku4[0]['price2'], 0);
+        				$sku4_detail		=		$sku4[0]['detail'];
+        				$sku4_sku			=		$sku4[0]['sku'];
+        			?>
+					<div class="heading"><h3><?php echo $sku4_name; ?></h3><p>&nbsp;</p></div>
+					<div class="img_container"><img src="imgs/<?php echo $sku4_image; ?>" alt="<?php echo $sku4_name; ?>" title="<?php echo $sku4_name; ?>" /></div>
+					<div class="offer"><br><br><p>IN STORE $<?php echo $sku4_price2; ?> <br />THIS OFFER $<?php echo $sku4_price; ?></p></div>
+					<?php if(!empty($sku4_detail))	{	?>
+                    <div class="text_container"><p style="font-size:15px;"><?php echo $sku4_detail; ?></p></div>
+                    <?php	}	?>
+					<button class="addToBagBtn" type="button" id="add_<?php echo $sku4_sku; ?>" onClick="cartAction('add','<?php echo $sku4_sku; ?>',<?php echo $sku4_price; ?>)" <?php if(isset($_SESSION[$sku4_sku])) { ?> style="display:none;"   <?php } ?>>Add To Bag</button>
+                    
+                    <a href="javascript:void(0)" title="Remove" onClick="cartAction('remove','<?php echo $sku4_sku; ?>')">
+                	<button class="rmvBtn"  id="remove_<?php echo $sku4_sku; ?>" <?php if(!isset($_SESSION[$sku4_sku])) { ?> style="display:none; background: var(--brand-main);"   <?php } ?>>Remove X</button>
+                    </a>
+				
+		</div>
+        	
+				<div class="column">
+				    <?php
+            			$sku5_name			=		$sku5[0]['name'];
+            			$sku5_image			=		$sku5[0]['image'];
+            			$sku5_price			=		number_format($sku5[0]['price'], 0);
+            			$sku5_price2		=		number_format($sku5[0]['price2'], 0);
+            			$sku5_detail		=		$sku5[0]['detail'];
+            			$sku5_sku			=		$sku5[0]['sku'];
+            
+            			?>
+                    <div class="heading"><h3><?php echo $sku5_name; ?></h3></div>
+                    <div class="img_container"><img src="imgs/<?php echo $sku5_image; ?>" alt="<?php echo $sku5_name; ?>" title="<?php echo $sku5_name; ?>" /></div>
+                    <div class="offer"><p>IN STORE $<?php echo $sku5_price2; ?> <br />THIS OFFER $<?php echo $sku5_price; ?></p></div>
+                    <?php if(!empty($sku5_detail))	{	?>
+                    <div class="text_container"><p style="font-size:15px;"><?php echo $sku5_detail; ?></p></div>
+                    <?php	}	?>
+                    <button class="addToBagBtn" type="button" id="add_<?php echo $sku5_sku; ?>" onClick="cartAction('add','<?php echo $sku5_sku; ?>',<?php echo $sku5_price; ?>)" <?php if(isset($_SESSION[$sku5_sku])) { ?> style="display:none;"   <?php } ?>>Add To Bag</button>
+                    
+                    <a href="javascript:void(0)" title="Remove" onClick="cartAction('remove','<?php echo $sku5_sku; ?>')">
+                	<button class="rmvBtn"  id="remove_<?php echo $sku5_sku; ?>" <?php if(!isset($_SESSION[$sku5_sku])) { ?> style="display:none; background: var(--brand-main);"   <?php } ?>>Remove X</button>
+                    </a>
+                 </div>
+           
+            	<div class="column">
+            	     <?php
+            			$sku6_name			=		$sku6[0]['name'];
+            			$sku6_image			=		$sku6[0]['image'];
+            			$sku6_price			=		number_format($sku6[0]['price'], 0);
+            			$sku6_price2		=		number_format($sku6[0]['price2'], 0);
+            			$sku6_detail		=		$sku6[0]['detail'];
+            			$sku6_sku			=		$sku6[0]['sku'];
+            
+            			?>
+            		<div class="heading"><h3><?php echo $sku6_name; ?></h3></div>
+            		<div class="img_container"><img src="imgs/<?php echo $sku6_image; ?>" alt="<?php echo $sku6_name; ?>" title="<?php echo $sku6_name; ?>" /></div>
+            		<div class="offer"><p>IN STORE $<?php echo $sku6_price2; ?> <br />THIS OFFER $<?php echo $sku6_price; ?></p></div>
+            		<?php if(!empty($sku6_detail))	{	?>
+                    <div class="text_container"><p style="font-size:15px;"><?php echo $sku6_detail; ?></p></div>
+                    <?php	}	?>
+            <button class="addToBagBtn" type="button" id="add_<?php echo $sku6_sku; ?>" onClick="cartAction('add','<?php echo $sku6_sku; ?>',<?php echo $sku6_price; ?>)" <?php if(isset($_SESSION[$sku6_sku])) { ?> style="display:none;"   <?php } ?>>Add To Bag</button>
+                    
+                    <a href="javascript:void(0)" title="Remove" onClick="cartAction('remove','<?php echo $sku6_sku; ?>')">
+                	<button class="rmvBtn"  id="remove_<?php echo $sku6_sku; ?>" <?php if(!isset($_SESSION[$sku6_sku])) { ?> style="display:none; background: var(--brand-main);"   <?php } ?>>Remove X</button>
+                    </a>
+	            </div>
+    	
+
+	<div class="two_col_container">
+	    <?php
+		$sku7_name			=		$sku7[0]['name'];
+		$sku7_image			=		$sku7[0]['image'];
+		$sku7_price			=		number_format($sku7[0]['price'], 0);
+		$sku7_price2		=		number_format($sku7[0]['price2'], 0);
+		$sku7_detail		=		$sku7[0]['detail'];
+		$sku7_sku			=		$sku7[0]['sku'];
+
+	?>
+		<div class="tab"><h4>Make Those Brows Slick ... Add This!</h4></div>
+		<div class="two_col">
+			<div class="col">
+				<div class="img_container"><div class="bg_block"></div><img src="imgs/<?php echo $sku7_image; ?>" alt="<?php echo $sku7_name; ?>" title="<?php echo $sku7_name; ?>" /></div></div>
+				<div class="col">
+					<div class="heading"><h3><?php echo $sku7_name; ?></h3></div>
+					<div class="offer"><p>IN STORE: $<?php echo $sku7_price2; ?> <br />THIS OFFER $<?php echo $sku7_price; ?></p></div>
+					<div class="text_container">
+					<p style="font-size:15px;"><?php echo $sku7_detail; ?></p>
+				</div>
+				<button class="addToBagBtn" type="button" id="add_<?php echo $sku7_sku; ?>" onClick="cartAction('add','<?php echo $sku7_sku; ?>',<?php echo $sku7_price; ?>)" <?php if(isset($_SESSION[$sku7_sku])) { ?> style="display:none;"   <?php } ?>>Add To Bag</button>
+                    
+                    <a href="javascript:void(0)" title="Remove" onClick="cartAction('remove','<?php echo $sku7_sku; ?>')">
+                	<button class="rmvBtn"  id="remove_<?php echo $sku7_sku; ?>" <?php if(!isset($_SESSION[$sku7_sku])) { ?> style="display:none; background: var(--brand-main);"   <?php } ?>>Remove X</button>
+                    </a>
+			</div>
+		</div>
+	</div>
+    <!--<div class="subscription-container">
+		<div class="header"><h4>Subscribe</h4></div>
+		<div class="two_row_container">
+			<div class="two-col">
+				<div class="col"><img src="imgs/lash-club.JPEG" alt="lash club" /></div>
+				<div class="col alt"><h2>Try our lash club at 50% Off</h2><span></span></div>
+			</div>
+			<div class="row center-col">
+				<div class="col">
+                    <p style="font-size:15px;">Slick ladies love our premium lash club, each month you get 3 premium slick lashes (Each retail at $39 each) for only $34 and today only you get to try it risk free for only $17 for Month 1. If you love it do nothing and we will ship you 3 pairs each month for only $34. If you hate it, which we hope you don’t, just cancel it with no hassle. Cancel at any time without sales pitches or retention offers.
+                    </p>
+					<button type="button" style="color: var(--brand-main); text-transform: uppercase; background: #111; border: 0; width: 60%; height: 50px; font-size: 16px; color:#FFF; transition: all 0.3s ease;">Add To Bag</button>
+				</div>
+			</div>
+		</div>
+	</div>-->
+</div>

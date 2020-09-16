@@ -115,13 +115,7 @@
 .best_seller {
   margin-top: 2rem;
 }
-body
-  > main
-  > section
-  > div.inventory_container
-  > div.container_inner
-  > div.lash_grid
-  > div:nth-child(1) {
+div.lash_grid > div:nth-child(1) {
   border: 6px solid var(--brand-main);
   background: linear-gradient(65deg, transparent 51%, #ee41fa44 50%);
   & .best_seller_tab_container {
@@ -135,13 +129,8 @@ body
     }
   }
 }
-body
-  > main
-  > section
-  > div.inventory_container
-  > div.container_inner
-  > div.lash_grid
-  > div:nth-child(2) {
+
+div.lash_grid > div:nth-child(2) {
   border: 6px solid var(--text-dark);
   background: linear-gradient(
     65deg,
@@ -215,23 +204,11 @@ body
   .best_seller {
     margin-top: 2rem;
   }
-  body
-    > main
-    > section
-    > div.inventory_container
-    > div.container_inner
-    > div.lash_grid
-    > div:nth-child(1) {
+  div.lash_grid > div:nth-child(1) {
     border: 6px solid var(--brand-main);
     background: transparent;
   }
-  body
-    > main
-    > section
-    > div.inventory_container
-    > div.container_inner
-    > div.lash_grid
-    > div:nth-child(2) {
+  div.lash_grid > div:nth-child(2) {
     border: 6px solid var(--text-dark);
     background: transparent;
   }
@@ -259,22 +236,10 @@ body
   .best_seller {
     margin-top: 2rem;
   }
-  body
-    > main
-    > section
-    > div.inventory_container
-    > div.container_inner
-    > div.lash_grid
-    > div:nth-child(1) {
+  div.lash_grid > div:nth-child(1) {
     border: 6px solid var(--brand-main);
   }
-  body
-    > main
-    > section
-    > div.inventory_container
-    > div.container_inner
-    > div.lash_grid
-    > div:nth-child(2) {
+  div.lash_grid > div:nth-child(2) {
     border: 6px solid var(--text-dark);
   }
 }
